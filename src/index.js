@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+// import { configureStore,applyMiddleware } from '@reduxjs/toolkit';
+// import UseReducer from './UseReducer';
+// import CounterReducer from './Reducer';
+// import logger from 'redux-logger';
+import store from './store';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode >
+    
+    <Provider store={store}>
+   
     <App />
+   
+    </Provider>
   </React.StrictMode>
 );
 
